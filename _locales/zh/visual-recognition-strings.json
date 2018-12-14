@@ -3,7 +3,7 @@
   "visualRecognition.InitOpenMV|block": "初始化OpenMV %port",
   "visualRecognition.NewCategory|block": "新建一个分类  %foldName",
   "visualRecognition.RecognitionCurrIMG|block": "识别当前图像",
-  "visualRecognition.TakePhotos|block": "拍摄一章照片 命名为 %picName | 放置在 %foldName 文件夹下",
+  "visualRecognition.TakePhotos|block": "拍摄一张照片 命名为 %picName | 放置在 %foldName 文件夹下",
   "visualRecognition.ViewCategoryCnt|block": "查看分类数量",
   "visualRecognition.ViewIMGCntUnderFold_Name|block": "查看 %foldName 文件夹下图片数量",
   "visualRecognition|block": "视觉识别",
