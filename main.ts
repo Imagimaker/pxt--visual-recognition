@@ -22,7 +22,7 @@ namespace visualRecognition {
     }
 
 
-    //% blockId=imagimaker_initOpenMV block="InitOpenMV port %port|band rate %bandrate"
+    //% blockId=imagimaker_initOpenMV block="InitOpenMV port %port"
     //% weight=100
     export function InitOpenMV(port:OpenMVPort): void  {
 
@@ -46,12 +46,12 @@ namespace visualRecognition {
     export function ViewCategoryCnt() {
         serial.writeLine("00010**000000000000**0000**00001**000000000000000000000000000000000000000000000000000000000000000000")
     }
-    //% blockId=imagimaker_viewIMGCntUnderFold_Name block="view img"
+    //% blockId=imagimaker_viewIMGCntUnderFold_Name block="view quality of images under %foldName"
     //% weight=70
     export function ViewIMGCntUnderFold_Name(foldName:string): void {
         serial.writeLine("00011**"+foldName+"**0000**00001**0000000000000000000000000000000000000000000000000000000000000000000");
     } 
-    //% blockId=imagimaker_viewIMGCntUnderFold_Name block="view img"
+    //% blockId=imagimaker_TakePhotos block="take a photo named %picName | under %foldName"
     //% weight=60       
     export function TakePhotos(picName:string,foldName:string) {
         serial.writeLine("00100**"+foldName+"**"+picName+"**00001**000000000000000000000000000000000000000000000000000000000000000");

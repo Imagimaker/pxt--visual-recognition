@@ -1,0 +1,10 @@
+{
+  "visualRecognition.ClearSDcard|block": "clear SD card",
+  "visualRecognition.InitOpenMV|block": "InitOpenMV port %port",
+  "visualRecognition.NewCategory|block": "new a category %foldName",
+  "visualRecognition.RecognitionCurrIMG|block": "recognition current image",
+  "visualRecognition.TakePhotos|block": "take a photo named %picName | under %foldName",
+  "visualRecognition.ViewCategoryCnt|block": "view quality of category",
+  "visualRecognition.ViewIMGCntUnderFold_Name|block": "view quality of images under %foldName",
+  "{id:category}VisualRecognition": "VisualRecognition"
+}
