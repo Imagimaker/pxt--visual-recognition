@@ -36,7 +36,7 @@ namespace visualRecognition {
         }
     }
     
-    //% blockId=imagimaker_newCategory block="new a category"
+    //% blockId=imagimaker_newCategory block="new a category %foldName"
     //% weight=90
     export function NewCategory(foldName:string): void {
         serial.writeLine("00001**"+foldName+"**0000**00001**0000000000000000000000000000000000000000000000000000000000000000000");
