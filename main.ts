@@ -26,7 +26,7 @@ namespace visualRecognition {
     //% weight=100
     export function InitOpenMV(port:OpenMVPort): void  {
 
-        Switch(port){
+        switch(port){
             case OpenMVPort.A1:
                 serial.redirect(SerialPin.P2,SerialPin.P1, BaudRate.BaudRate19200);
                 break;
