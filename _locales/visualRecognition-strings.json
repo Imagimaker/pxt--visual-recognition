@@ -1,0 +1,21 @@
+{
+  "magiSuperDriver.Directions.Backward|block": "1",
+  "magiSuperDriver.Directions.Forward|block": "0",
+  "magiSuperDriver.MotorRun|block": "Motor %index|running with direction %direction| and speed %speed",
+  "magiSuperDriver.MotorStopAll|block": "Motor Stop All",
+  "magiSuperDriver.MotorStop|block": "Motor Stop %index",
+  "magiSuperDriver.Servo|block": "Servo %index|degree %degree",
+  "magiSuperDriver.StepperDegree|block": "Stepper %index|degree %degree",
+  "magiSuperDriver.StepperTurn|block": "Stepper %index|turn %turn",
+  "magiSuperDriver.Steppers.Step_1|block": "Step1",
+  "magiSuperDriver.Steppers.Step_2|block": "Step2",
+  "magiSuperDriver.Turns.T1B0|block": "1",
+  "magiSuperDriver.Turns.T1B2|block": "1/2",
+  "magiSuperDriver.Turns.T1B4|block": "1/4",
+  "magiSuperDriver.Turns.T2B0|block": "2",
+  "magiSuperDriver.Turns.T3B0|block": "3",
+  "magiSuperDriver.Turns.T4B0|block": "4",
+  "magiSuperDriver.Turns.T5B0|block": "5",
+  "magiSuperDriver|block": "SuperDriver",
+  "{id:category}MagiSuperDriver": "MagiSuperDriver"
+}
