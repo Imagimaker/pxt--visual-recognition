@@ -44,24 +44,14 @@ namespace visualRecognition {
     //% blockId=imagimaker_viewCategoryCnt block="view quality of category"
     //% weight=80
     export function ViewCategoryCnt():string {
-        serial.writeLine("00010**000000000000**0000**00001**000000000000000000000000000000000000000000000000000000000000000000")
-        let startTime = input.runningTimeMicros();
-        let returnData="";
-        while (input.runningTimeMicros()-startTime<3000000&&returnData!=="") {
-            returnData=serial.readString();            
-        }
-        return returnData;
+        serial.writeLine("00010**000000000000**0000**00001**000000000000000000000000000000000000000000000000000000000000000000")        
+        return serial.readString();
     }
     //% blockId=imagimaker_viewIMGCntUnderFold_Name block="view quality of images under %foldName"
     //% weight=70
     export function ViewIMGCntUnderFold_Name(foldName:string):string {
         serial.writeLine("00011**"+foldName+"**0000**00001**0000000000000000000000000000000000000000000000000000000000000000000");
-        let startTime = input.runningTimeMicros();
-        let returnData="";
-        while (input.runningTimeMicros()-startTime<3000000&&returnData!=="") {
-            returnData=serial.readString();            
-        }
-        return returnData;
+        return serial.readString();
     } 
     //% blockId=imagimaker_TakePhotos block="take a photo named %picName | under %foldName"
     //% weight=60       
@@ -72,12 +62,7 @@ namespace visualRecognition {
     //% weight=50
     export function RecognitionCurrIMG():string  {
         serial.writeLine("10000**000000000000**0000**00001**000000000000000000000000000000000000000000000000000000000000000000");
-        let startTime = input.runningTimeMicros();
-        let returnData="";
-        while (input.runningTimeMicros()-startTime<3000000&&returnData!=="") {
-            returnData=serial.readString();            
-        }
-        return returnData;
+        return serial.readString();
     }
 
     //% blockId=imagimaker_clearSDcard block="clear SD card"
