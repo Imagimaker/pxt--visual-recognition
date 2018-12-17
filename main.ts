@@ -47,7 +47,7 @@ namespace visualRecognition {
         serial.writeLine("00010**000000000000**0000**00001**000000000000000000000000000000000000000000000000000000000000000000")
         var startTime = input.runningTimeMicros();
         var returnData="";
-        while (input.runningTimeMicros()-startTime>3000000) {
+        while (input.runningTimeMicros()-startTime<3000000&&returnData!=="") {
             returnData=serial.readString();            
         }
         return returnData;
@@ -58,7 +58,7 @@ namespace visualRecognition {
         serial.writeLine("00011**"+foldName+"**0000**00001**0000000000000000000000000000000000000000000000000000000000000000000");
         var startTime = input.runningTimeMicros();
         var returnData="";
-        while (input.runningTimeMicros()-startTime>3000000) {
+        while (input.runningTimeMicros()-startTime>3000000&&returnData!=="") {
             returnData=serial.readString();            
         }
         return returnData;
@@ -72,6 +72,12 @@ namespace visualRecognition {
     //% weight=50
     export function RecognitionCurrIMG() {
         serial.writeLine("10000**000000000000**0000**00001**000000000000000000000000000000000000000000000000000000000000000000");
+        var startTime = input.runningTimeMicros();
+        var returnData="";
+        while (input.runningTimeMicros()-startTime>3000000&&returnData!=="") {
+            returnData=serial.readString();            
+        }
+        return returnData;
     }
 
     //% blockId=imagimaker_clearSDcard block="clear SD card"
