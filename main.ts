@@ -29,9 +29,11 @@ namespace visualRecognition {
         switch(port){
             case OpenMVPort.A1:
                 serial.redirect(SerialPin.P2,SerialPin.P1, BaudRate.BaudRate19200);
+                serial.writeLine("00010**000000000000**0000**00001**000000000000000000000000000000000000000000000000000000000000000000");    
                 break;
             case OpenMVPort.A2:
                 serial.redirect(SerialPin.P1,SerialPin.P0, BaudRate.BaudRate19200);
+                serial.writeLine("00010**000000000000**0000**00001**000000000000000000000000000000000000000000000000000000000000000000");    
                 break;
         }
     }
@@ -44,7 +46,7 @@ namespace visualRecognition {
     //% blockId=imagimaker_viewCategoryCnt block="view quality of category"
     //% weight=80
     export function ViewCategoryCnt():string {
-        serial.writeLine("00010**000000000000**0000**00001**000000000000000000000000000000000000000000000000000000000000000000")        
+        serial.writeLine("00010**000000000000**0000**00001**000000000000000000000000000000000000000000000000000000000000000000");        
         return serial.readString();
     }
     //% blockId=imagimaker_viewIMGCntUnderFold_Name block="view quality of images under %foldName"
