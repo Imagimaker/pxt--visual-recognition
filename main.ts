@@ -58,7 +58,7 @@ namespace visualRecognition {
         serial.writeLine("00011**"+foldName+"**0000**00001**0000000000000000000000000000000000000000000000000000000000000000000");
         var startTime = input.runningTimeMicros();
         var returnData="";
-        while (input.runningTimeMicros()-startTime>3000000&&returnData!=="") {
+        while (input.runningTimeMicros()-startTime<3000000&&returnData!=="") {
             returnData=serial.readString();            
         }
         return returnData;
@@ -70,11 +70,11 @@ namespace visualRecognition {
     }
     //% blockId=imagimaker_recognitionCurrIMG block="recognition current image"
     //% weight=50
-    export function RecognitionCurrIMG() {
+    export function RecognitionCurrIMG():string  {
         serial.writeLine("10000**000000000000**0000**00001**000000000000000000000000000000000000000000000000000000000000000000");
         var startTime = input.runningTimeMicros();
         var returnData="";
-        while (input.runningTimeMicros()-startTime>3000000&&returnData!=="") {
+        while (input.runningTimeMicros()-startTime<3000000&&returnData!=="") {
             returnData=serial.readString();            
         }
         return returnData;
