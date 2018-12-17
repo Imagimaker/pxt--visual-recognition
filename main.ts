@@ -45,11 +45,23 @@ namespace visualRecognition {
     //% weight=80
     export function ViewCategoryCnt() {
         serial.writeLine("00010**000000000000**0000**00001**000000000000000000000000000000000000000000000000000000000000000000")
+        var startTime = input.runningTimeMicros();
+        var returnData="";
+        while (input.runningTimeMicros()-startTime>3000000) {
+            returnData=serial.readString();            
+        }
+        return returnData;
     }
     //% blockId=imagimaker_viewIMGCntUnderFold_Name block="view quality of images under %foldName"
     //% weight=70
-    export function ViewIMGCntUnderFold_Name(foldName:string): void {
+    export function ViewIMGCntUnderFold_Name(foldName:string):string {
         serial.writeLine("00011**"+foldName+"**0000**00001**0000000000000000000000000000000000000000000000000000000000000000000");
+        var startTime = input.runningTimeMicros();
+        var returnData="";
+        while (input.runningTimeMicros()-startTime>3000000) {
+            returnData=serial.readString();            
+        }
+        return returnData;
     } 
     //% blockId=imagimaker_TakePhotos block="take a photo named %picName | under %foldName"
     //% weight=60       
