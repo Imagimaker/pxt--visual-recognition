@@ -43,7 +43,7 @@ namespace visualRecognition {
     }
     //% blockId=imagimaker_viewCategoryCnt block="view quality of category"
     //% weight=80
-    export function ViewCategoryCnt() {
+    export function ViewCategoryCnt():string {
         serial.writeLine("00010**000000000000**0000**00001**000000000000000000000000000000000000000000000000000000000000000000")
         var startTime = input.runningTimeMicros();
         var returnData="";
